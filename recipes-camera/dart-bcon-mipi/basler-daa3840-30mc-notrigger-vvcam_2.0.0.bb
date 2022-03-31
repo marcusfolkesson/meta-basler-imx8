@@ -5,4 +5,4 @@ SRC_URI[sha256sum] = "e520c300a65522ba5fc74c94b260cf01f89117d4dba4b15a7b8459cff2
 
 require basler-dart-bcon-mipi.inc
 
-RDEPENDS_${PN} = "imx-gpu-g2d"
+RDEPENDS:${PN} = "imx-gpu-g2d"

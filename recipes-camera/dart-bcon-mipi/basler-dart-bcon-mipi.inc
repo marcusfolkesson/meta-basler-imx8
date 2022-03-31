@@ -5,15 +5,15 @@ PACKAGE_FILE_NAME="${BPN}_${PV}_arm64.selfsh"
 
 SRC_URI = "https://artifacts.baslerweb.com/artifactory/embedded-vision-public/packages/${BPN}/${PACKAGE_FILE_NAME}"
 
-INSANE_SKIP_${PN} = "ldflags"
+INSANE_SKIP:${PN} = "ldflags"
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 INHIBIT_PACKAGE_STRIP = "1"
 
-RDEPENDS_${PN} = "\
+RDEPENDS:${PN} = "\
     kernel-module-basler-camera \
 "
 
-RRECOMMENDS_${PN} = "\
+RRECOMMENDS:${PN} = "\
     pylon \
     python3-pypylon \
 "
@@ -56,5 +56,5 @@ do_install() {
     echo "export GENICAM_GENTL64_PATH=/opt/dart-bcon-mipi/lib" > "${D}/etc/profile.d/basler-dart-bcon-mipi.sh"
 }
 
-FILES_${PN} += "/opt/*"
-FILES_${PN} += "/etc/"
+FILES:${PN} += "/opt/*"
+FILES:${PN} += "/etc/"

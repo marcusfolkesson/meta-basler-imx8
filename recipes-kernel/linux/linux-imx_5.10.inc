@@ -1,7 +1,7 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/linux-imx:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/linux-imx:"
 
 # basler patchset
-SRC_URI_append = "\
+SRC_URI:append = "\
     file://0001-make-sensor-controls-available-in-mx6s_capture.patch \
     file://0002-added-SRGGB8-format-support.patch \
     file://0003-rxhs-settle-and-send-level-value-is-now-optinal-conf.patch \
